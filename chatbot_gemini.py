@@ -13,7 +13,7 @@ arquivo = open("Chave_GenAI.txt")
 chave = arquivo.read()
 arquivo.close()
 
-genai.configure(api_key=">INSIRA AQUI SUA KEY DO GENAI")
+genai.configure(api_key=chave)
 
 # Set up the model
 generation_config = {
