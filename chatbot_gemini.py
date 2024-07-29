@@ -7,6 +7,12 @@ $ pip install google-generativeai
 import google.generativeai as genai
 from os import system
 
+# Pegando a chave do genai, salva em formato txt
+
+arquivo = open("Chave_GenAI.txt")
+chave = arquivo.read()
+arquivo.close()
+
 genai.configure(api_key=">INSIRA AQUI SUA KEY DO GENAI")
 
 # Set up the model
@@ -15,7 +21,7 @@ generation_config = {
   "top_p": 0.95,
   "top_k": 0,
   "max_output_tokens": 8192,
-}
+} 
 
 safety_settings = [
   {
